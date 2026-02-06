@@ -1,0 +1,9 @@
+from fastapi import FastAPI
+from transformers import pipeline
+
+app = FastAPI() 
+summarizer = pipeline("summarization")
+
+@app.post("/summarize")
+def summarize(text: str):
+    return {"summary": summarizer(text)[0]["summary_text"]}
