@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CleanRead</title>
+  <link rel="stylesheet" href="src/content/fonts/fonts.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header class="popup-header">
+      <h1>CleanRead</h1>
+      <div class="status-indicator" id="statusIndicator"></div>
+    </header>
+
+    <main class="popup-main">
+      <!-- Master Toggle -->
+      <section class="control-section">
+        <label class="toggle-label">
+          <input type="checkbox" id="masterToggle" class="toggle-input">
+          <span class="toggle-slider"></span>
+          <span class="toggle-text">Dyslexia Mode</span>
+        </label>
+      </section>
+
+      <!-- Quick Controls -->
+      <section class="control-section" id="quickControls">
+        <!-- Font Selector -->
+        <div class="control-group">
+          <label for="fontSelect" class="control-label">Font</label>
+          <select id="fontSelect" class="control-select">
+            <option value="opendyslexic">OpenDyslexic</option>
+            <option value="lexend">Lexend</option>
+            <option value="sans">Sans-Serif</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- Current Site Info -->
+      <section class="site-info" id="siteInfo">
+        <div class="site-name" id="siteName">Loading...</div>
+        <div class="site-controls">
+          <label class="toggle-label small">
+            <input type="checkbox" id="perSiteToggle" class="toggle-input">
+            <span class="toggle-slider"></span>
+            <span class="toggle-text">Use different settings on this site</span>
+          </label>
+        </div>
+      </section>
+    </main>
+
+    <footer class="popup-footer">
+      <div class="shortcuts-info">
+        <div class="shortcut" id="shortcutText">Alt+Shift+D</div>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
